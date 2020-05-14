@@ -4,4 +4,4 @@
  * @Last Modified by: Peak Xin
  * @Last Modified time: 2020-05-14 16:16:19
  */
-$('body').scrollspy({ target: '.navbar-menu' })
+$('body').scrollspy({ target: '.navbar-menu' });
