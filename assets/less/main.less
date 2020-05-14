@@ -2,10 +2,15 @@
  * @Author: Peak Xin 
  * @Date: 2020-05-14 16:10:36 
  * @Last Modified by: Peak Xin
- * @Last Modified time: 2020-05-14 16:28:53
+ * @Last Modified time: 2020-05-15 00:07:44
  */
 // less
 @charset "utf-8";
+@theme_blue: #0a89ea;
+@theme_yellow: #ffaa00;
+@navbar_bg_color: #fff;
+@footer_bg_color: #313131;
+@copyright_color: #a4a4a4;
 
 .navbar {
     border: 0;
@@ -13,7 +18,41 @@
     box-shadow: 0 0 15px rgba(0,0,0,.3);
 }
 .navbar-default {
-    background-color: #fff;
+    background-color: @navbar_bg_color;
+    .navbar-nav {
+        position: relative;
+        li {
+            & > a:hover,  & > a:focus {
+                color: @theme_blue;
+            }
+        }
+        & > .active {
+            & > a, & > a:hover {
+                color: @theme_blue;
+                background-color: @navbar_bg_color;
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: @theme_blue;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .nav-bar {
+            display: block;
+            position: absolute;
+            background-color: @theme_blue;
+            border-radius: 5px;
+            height: 4px;
+            z-index: 1000;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+        }
+    }
 }
 .navbar-brand {
     padding: 4px 15px;
@@ -21,14 +60,37 @@
 .banner {
     margin-top: 50px;
 }
+section {
+    .header {
+        h2 {
+            color: @theme_blue;
+        }
+    }
+    .body {
+        h3 {
+            margin-bottom: 34px;
+        }
+        ul {
+            li {
+                font-size: 16px;
+                text-indent: 2em;
+            }
+        }
+        .lead {
+            font-size: 16px;
+            text-indent: 2em;
+        }
+    }
+}
 .footer {
-    background-color: #313131;
+    background-color: @footer_bg_color;
+    border-top: 4px solid @theme_blue;
     padding: 10px 0;
     a {
-        color: #0a89ea;
+        color: @theme_blue;
     }
     .copyright {
-        color: #a4a4a4;
+        color: @copyright_color;
         text-align: center;
     }
     
