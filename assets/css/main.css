@@ -1,0 +1,31 @@
+@charset "utf-8";
+.navbar {
+  border: 0;
+  margin: 0;
+}
+.navbar-default {
+  background-color: #fff;
+}
+.navbar-brand {
+  padding: 4px 15px;
+}
+.banner {
+  margin-top: 50px;
+}
+.footer {
+  background-color: #313131;
+  padding: 10px 0;
+}
+.footer a {
+  color: #0a89ea;
+}
+.footer .copyright {
+  color: #a4a4a4;
+  text-align: center;
+}
+.target-fix {
+  position: relative;
+  top: -50px;
+  display: block;
+  visibility: hidden;
+}
